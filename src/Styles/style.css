@@ -1,0 +1,158 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #D9B504;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0 0 10px 1px white;
+  margin-top: 10px;
+  width: 220px;
+  height: 220px;
+}
+
+.square {
+  font-weight: 700;
+  font-size: 3rem;
+  animation: square 0.1s ease;
+}
+
+@keyframes square {
+  0% {
+    font-size: 0px;
+  }
+  90% {
+    font-size: 2.5rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+.btn {
+  background: #F29F05;
+  color: #730202;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.hoz {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.ver {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.both {
+  border: 2px solid black;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+  height: 100vh;
+}
+
+.won {
+  background-color: #04ADBF !important;
+  animation: won 0.3s 0s 2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes won {
+  from {
+    color: #04ADBF;
+  }
+  to {
+    color: #D97904;
+  }
+}
+.end > button:not(.won) {
+  color: white;
+}
+
+.moves_history {
+  display: flex;
+  flex-flow: column wrap;
+  width: 280px;
+  max-height: 160px;
+  min-width: 150px;
+}
+.moves_history button {
+  background-color: #262626;
+  color: white;
+  font-size: 1rem;
+  padding: 3px 10px;
+  margin-top: 2px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.moves_history button:focus {
+  outline: none;
+}
+
+.board_outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status_indicator {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 361px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .square {
+    font-size: 4rem;
+  }
+
+  @keyframes square {
+    0% {
+      font-size: 0px;
+    }
+    90% {
+      font-size: 4.5rem;
+    }
+    100% {
+      font-size: 4rem;
+    }
+  }
+  .container {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .moves_history {
+    margin-left: 20px;
+    max-height: 200px;
+  }
+  .moves_history button {
+    font-size: 1.1rem;
+    padding: 5px 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
