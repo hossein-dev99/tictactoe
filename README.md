@@ -1,4 +1,4 @@
-# A Cute Game Tictactoe
+# A Cute Game Tictactoe with React
 
 ![Design preview for the Tictactoe game](./design/titactoe.png)
 
